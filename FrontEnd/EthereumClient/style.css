@@ -1,0 +1,154 @@
+#MainScreen {
+
+	box-sizing: border-box;
+	border: 4px solid green;
+	border-radius: 20px;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	background: #DEFFE4;
+}
+
+#a {
+
+	position: relative;
+	left: 30px;
+	top: 20px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#b {
+
+	position: relative;
+	left: 30px;
+	top: 30px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#c {
+
+	position: relative;
+	left: 30px;
+	top: 40px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#d {
+
+	position: relative;
+	left: 30px;
+	top: 46px;
+	font-size: 26px;
+	color: #808080;
+}
+
+
+#newsTitle {
+
+	font-size: 16px;
+	top: 20px;
+	position: relative;
+	left: 30px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: 	#D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#authorName {
+
+	position: relative;
+	left: 30px;
+	top: 28px;
+
+	font-size: 16px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#newsDescription {
+
+	position: relative;
+	left: 30px;
+	top: 40px;
+
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+#newsTags {
+
+	position: relative;
+	left: 30px;
+	top: 44px;
+
+	font-size: 16px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#submitButton {
+
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    right: -250px;
+    top: 50px;
+}
+
+#submitButton:after {
+
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#submitButton:active:after {
+
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}

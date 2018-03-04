@@ -9,6 +9,31 @@
 	<link rel="stylesheet" type="text/css" href="./style.css">
 
 <!--**************************************************************************-->
+<div id="MainScreen" >
+	
+	<span id="MainTitle">Welcome To Illuminati's BlockChain For News</span><br>
+
+	<button id="getNews">Get News</button>
+	<button id="addNews">Add News</button>
+	<button id="voteNews">Vote News</button><br>
+
+	<button id="b1"></button>
+	<button id="b2"></button>
+	<button id="b3"></button>
+
+</div>
+
+
+<!--**************************************************************************-->
+
+<div id="GetNewsScreen">
+	
+	<textarea id="news"></textarea>
+
+</div>
+
+
+<!--**************************************************************************-->
 
 <div id="AddNewsScreen">
 
@@ -28,28 +53,6 @@
 
 </div>
 
-
-<!--**************************************************************************-->
-
-<div id="GetNewsScreen">
-	
-	<textarea id="news"></textarea>
-
-</div>
-
-<!--**************************************************************************-->
-
-<!-- <div id="MainScreen">
-	
-	<span id="MainTitle">Welcome To Illuminati's BlockChain For News</span><br>
-
-	<button id="getNews">Get News</button>
-	<button id="addNews">Add News</button>
-	<button id="voteNews">Vote News</button>
-
-</div> -->
-
-
 <!--**************************************************************************-->
 
 <div id="VoteScreen">
@@ -60,13 +63,15 @@
 	<span id="vote">Vote Type : </span>
 	
 	<label class="container">Positive ---
-  		<input type="checkbox">
+  		<input id="c1" type="checkbox">
   		<span class="checkmark"></span>
 	</label>
 	<label class="container">Negative ---
-  		<input type="checkbox">
+  		<input id="c2" type="checkbox">
   		<span class="checkmark"></span>
 	</label>
+
+	<button id="voteSubmit">Submit</button>
 
 </div>
 

@@ -219,8 +219,9 @@ var newscontractContract = web3.eth.contract([
 	}
 ]);
     
-var block = newscontractContract.at("0x8e7a422c22326ad36faa05bb119fb9255d1bf311");
+var block = newscontractContract.at("0xca9c2d6243ad9793168d45418c4502168e400732");
 
+//--------------------------------------------------------------------------------------------------
 
 function addblock(_title, _storedData, _authorName,  _Tag){
 	console.log("i am here");
@@ -230,6 +231,7 @@ function addblock(_title, _storedData, _authorName,  _Tag){
 function getNews(){
 	block.Getnews(function(error,result){
 		if(!error){
+			$('#news').text("");
 			var data = result;
 			var i;
 			for(i = 0;i<data[0].length;i++ ){
@@ -259,13 +261,49 @@ function getVotess(_title){
 	
 }
 
-function setVote(_title,value){
-	block.vote(web3.fromAscii(_title),value);
+function setVote(_title, value){
+	console.log("i am here V");
+	block.vote(_title, value);
 }
 
-var newsData ;
+//----------------------------------
 
-//--------------------------------------------------------------------------------------------------
+$(function() {
+
+	$('#getNews').click(function(){
+
+		$('#GetNewsScreen').show();
+		$('#AddNewsScreen').hide();
+		$('#VoteScreen').hide();
+
+		$('#b1').show();
+		$('#b2').hide();
+		$('#b3').hide();
+	});
+
+	$('#addNews').click(function(){
+
+		$('#GetNewsScreen').hide();
+		$('#AddNewsScreen').show();
+		$('#VoteScreen').hide();
+
+		$('#b1').hide();
+		$('#b2').show();
+		$('#b3').hide();
+	});
+
+	$('#voteNews').click(function(){
+
+		$('#GetNewsScreen').hide();
+		$('#AddNewsScreen').hide();
+		$('#VoteScreen').show();
+
+		$('#b1').hide();
+		$('#b2').hide();
+		$('#b3').show();
+	});
+
+});
 
 var NewsTitle;
 var AuthorName;
@@ -279,10 +317,10 @@ $(function() {
 
 		NewsTitle = $('#newsTitle').val();
 		AuthorName = $('#authorName').val();
-		NewsDescription =  $('#newsDescription').val()
+		NewsDescription =  $('#newsDescription').val();
 		NewsTags = $('#newsTags').val();
 
-		addblock(NewsTitle, NewsDescription, AuthorName,  NewsTags)
+		addblock(NewsTitle, NewsDescription, AuthorName,  NewsTags);
 
 		console.log(NewsTitle);
 		console.log(AuthorName);
@@ -302,6 +340,61 @@ $(function() {
 
 //-----------------------------------------------------------------------------------------------------
 
-
+//var newsData = [[1,2,3,4],[1,2,3,4]];
 var titles = ["News Title :", "Author Name :", "News Description :", "News Tags :"];
-getNews();
+
+/*$(function() {
+
+	for (var i = 0; i < newsData.length; i++) {
+		
+		if(i != 0){
+
+			$('#news').text($('#news').val() + "\n\n\n\n");
+
+		}
+
+		$('#news').text($('#news').val() + '>>>> News : ' + (i+1));
+		$('#news').text($('#news').val() + "\n\n");
+
+		for (var j = 0; j < 4; j++) {
+			
+			$('#news').text($('#news').val() + ("     " + titles[j] + " " + newsData[i][j]));
+			$('#news').text($('#news').val() + "\n");
+		}
+	}
+
+});*/
+
+
+/********************************************************************************************************/
+
+var ArticleName;
+var Vote;
+
+ $(function() {
+
+ 	$('#voteSubmit').click(function(){
+ 		console.log("i am here");
+ 		ArticleName = $('#articleName').val();
+ 		console.log(ArticleName + ' ' + Vote);
+ 		setVote(web3.fromAscii(ArticleName), Vote);
+
+ 		$('#articleName').val("");
+		$('#c1').prop('checked', false);
+		$('#c2').prop('checked', false);
+ 	});
+
+ 	$('#c1').change(function(){
+
+ 		Vote = 0;
+
+ 	});
+
+ 	$('#c2').change(function(){
+
+ 		Vote = 1;
+ 	});
+
+
+
+ });

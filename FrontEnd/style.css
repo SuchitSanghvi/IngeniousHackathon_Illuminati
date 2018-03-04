@@ -1,0 +1,462 @@
+body {
+
+	background: #DDFFD9;
+}
+
+
+#AddNewsScreen {
+
+	box-sizing: border-box;
+	border: 4px solid green;
+	border-radius: 20px;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	background: #DEFFE4;
+}
+
+#a {
+
+	position: relative;
+	left: 30px;
+	top: 20px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#b {
+
+	position: relative;
+	left: 30px;
+	top: 30px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#c {
+
+	position: relative;
+	left: 30px;
+	top: 40px;
+	font-size: 26px;
+	color: #808080;
+}
+
+#d {
+
+	position: relative;
+	left: 30px;
+	top: 46px;
+	font-size: 26px;
+	color: #808080;
+}
+
+
+#newsTitle {
+
+	font-size: 16px;
+	top: 20px;
+	position: relative;
+	left: 30px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: 	#D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#authorName {
+
+	position: relative;
+	left: 30px;
+	top: 28px;
+
+	font-size: 16px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#newsDescription {
+
+	position: relative;
+	left: 30px;
+	top: 40px;
+
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+#newsTags {
+
+	position: relative;
+	left: 30px;
+	top: 44px;
+
+	font-size: 16px;
+	width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+#submitButton {
+
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    right: -250px;
+    top: 50px;
+}
+
+#submitButton:after {
+
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#submitButton:active:after {
+
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/*******************************************************************/
+
+#MainScreen {
+
+	text-align: center;
+}
+
+#MainTitle {
+
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	color: #15B300;	
+}
+
+#getNews {
+
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    right: -0px;
+    top: 50px;
+}
+
+#getNews:after {
+
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#getNews:active:after {
+
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#addNews {
+
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    right: -10px;
+    top: 50px;
+}
+
+#addNews:after {
+
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#addNews:active:after {
+
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#voteNews {
+
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    right: -20px;
+    top: 50px;
+}
+
+#voteNews:after {
+
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#voteNews:active:after {
+
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/******************************************************************************/
+
+#GetNewsScreen {
+
+	box-sizing: border-box;
+	border: 4px solid green;
+	border-radius: 20px;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	background: #DEFFE4;
+    padding-top: 0px;
+}
+
+#news {
+
+	position: relative;
+	width: 96%;
+	height: 96%;
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+    left: 12px;
+}*/
+
+/***************************************************************************************/
+
+#VoteScreen {
+
+    text-align: center;
+    box-sizing: border-box;
+    border: 4px solid green;
+    border-radius: 20px;
+    width: 600px;
+    height: 240px;
+    margin: auto;
+    background: #DEFFE4;
+}
+
+#articleVote {
+
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: #15B300; 
+}
+
+#title {
+
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    left: 0px;
+    top: 40px;
+    color: #15B300;    
+}
+
+#vote {
+
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    left: -208px;
+    top: 50px;
+    color: #15B300;    
+}
+
+#articleName {
+
+    font-size: 16px;
+    position: relative;
+    left: 10px;
+    top: 36px;
+    width: 50%;
+    height: 36px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color:   #D1E3CF;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 10px;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 105px;
+    margin-bottom: 12px;
+    left: -100px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #1D7012;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 380px;
+    height: 25px;
+    width: 25px;
+    background-color: #9FF294;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #579E4D;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #579E4D;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
